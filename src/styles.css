@@ -1,0 +1,109 @@
+html,
+#root {
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  background: #28292e;
+}
+
+.app {
+  min-height: 100vh;
+  transition: all 0.3s ease;
+}
+
+.container {
+  padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.toggle-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 80px;
+  height: 40px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #1c1d21;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 36px;
+  width: 36px;
+  left: 2px;
+  bottom: 2px;
+  background-color: #333742;
+  transition: 0.4s;
+  border-radius: 8px;
+}
+
+input:checked + .slider:before {
+  transform: translateX(40px);
+  background-color: #2196f3;
+}
+
+.icon-container {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.moon {
+  order: 0;
+}
+
+.dark .sun-icon {
+  fill: #fffefe;
+}
+.sun {
+  order: 1;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+}
+
+.dark .sun-icon {
+  fill: #fffefe;
+}
+
+.dark {
+  background-color: #ffffff;
+  color: #333333;
+}
+
+.light {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
